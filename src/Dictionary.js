@@ -5,9 +5,11 @@ import Results from "./Results";
 
 export default function Dictionary() {
     let [keyword, setKeyword] = useState("");
+    let [results, setResults] = useState(null);
 
     function handleResponse(response) {
-        console.log(response.data[0].meanings.definition);
+        console.log(response.data[0]);
+        setResults(response.data[0]);
     }
 
     function search(event) {
@@ -27,7 +29,7 @@ export default function Dictionary() {
             <form onSubmit={search}>
                 <input type="search" onChange={handleKeywordChange} />
             </form>
-            <Results results={keyword} />
+            <Results results={results} />
         </div>
     )
 }

@@ -2,13 +2,12 @@ import React from "react";
 import Meaning from "./Meaning";
 
 export default function Results(props) {
-    console.log(props.results);
-    if (props.results) {
+    if (props.definition) {
         return (
         <div className="Results">
-            <h2>
-                {props.keyword.meanings.definition}
-            </h2>
+            <h1>
+                {props.definition.word}
+            </h1>
             {props.results.meanings.map(function (meaning, index) {
                 return (
                     <div key={index}>

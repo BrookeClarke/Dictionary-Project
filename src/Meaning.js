@@ -1,6 +1,13 @@
 import React from "react";
 
 export default function Meaning(props) {
-    console.log(props.meanings.definition)
-    return "huiefnvd"
+    if (props.meaning) {
+        return (
+            <div className="SearchResults">
+                <h3>{props.meaning.definition}</h3>
+            </div>
+        );
+    } else {
+        return null;
+    }
 }
