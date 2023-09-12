@@ -5,17 +5,13 @@ export default function Meaning(props) {
         return (
             <div className="Meaning">
                 <h2>{props.meaning.partOfSpeech}</h2>
-                {props.meaning.definitions.map(function (definition, index) {
-                    return (
-                        <div key={index}>
-                            <p>
-                                {props.meaning.definition}
-                                <br />
-                                {props.meaning.example}
-                            </p>
-                        </div>
-                    );
-                })}
+                <div>
+                    <p>
+                        {props.meaning.definition}
+                        <br />
+                        {props.meaning.example}
+                    </p>
+                </div>
             </div>
         );
     }
